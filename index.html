@@ -58,46 +58,54 @@ header {
   color: #ffffff;
 }
 
-/* PREVIEW SECTION – STABLE BLOCK ABOVE TABLE */
+/* ================================
+   PREVIEW SECTION – centered layout
+   ================================ */
 .preview-section {
   width: 100%;
-  padding-left: 40px;
-  margin-top: 28px;
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
 
-.preview-header {
+.preview-center {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 40px;
 }
 
-.preview-button {
-  padding: 12px 26px;
-  background: #cc0033;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.preview-collage {
+/* left & right 6-square blocks */
+.preview-side {
   display: grid;
-  grid-template-columns: repeat(2, 95px);
+  grid-template-columns: repeat(3, 95px);
   grid-template-rows: repeat(2, 95px);
-  gap: 8px;
+  gap: 10px;
 }
 
-.preview-collage img {
+.preview-side img {
   width: 95px;
   height: 95px;
   object-fit: cover;
   border-radius: 6px;
+  cursor: pointer;
 }
 
-/* POPUP GALLERY */
+/* Center button */
+.preview-button {
+  padding: 14px 28px;
+  background: #cc0033;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* ===============================
+   POPUP GALLERY
+   =============================== */
 .gallery-modal {
   display: none;
   position: fixed;
@@ -137,7 +145,9 @@ header {
   cursor: pointer;
 }
 
-/* FULLSCREEN IMAGE */
+/* ===============================
+   FULLSCREEN IMAGE VIEW
+   =============================== */
 #largeView {
   display: none;
   position: fixed;
@@ -164,7 +174,10 @@ header {
   cursor: pointer;
 }
 
-/* MAIN CONTENT */
+/* ===============================
+   MAIN CONTENT BOX
+   =============================== */
+
 .container-box {
   max-width: 1100px;
   margin: 40px auto 80px auto;
@@ -173,7 +186,7 @@ header {
   background: rgba(255,255,255,0.07);
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  box-shadow: 0 0 20px rgba(0,0,0,0.35);
 }
 
 .summary {
@@ -209,6 +222,7 @@ header {
 }
 
 </style>
+
 </head>
 
 
@@ -224,26 +238,46 @@ header {
 </header>
 
 
-<!-- PREVIEW SECTION -->
-<div class="preview-section">
-  <div class="preview-header">
 
+<!-- ===========================================
+     PREVIEW SECTION (12 squares + centered button)
+     =========================================== -->
+<div class="preview-section">
+  <div class="preview-center">
+
+    <!-- LEFT 6 squares -->
+    <div class="preview-side left-side">
+      <img onclick="enlarge(this.src)" src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
+      <img onclick="enlarge(this.src)" src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
+      <img onclick="enlarge(this.src)" src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
+      <img onclick="enlarge(this.src)" src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
+      <img onclick="enlarge(this.src)" src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
+      <img onclick="enlarge(this.src)" src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
+    </div>
+
+    <!-- BUTTON -->
     <button class="preview-button" onclick="openGallery()">
       View Some of Amaobi's Sample Work
     </button>
 
-    <div class="preview-collage">
-      <img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
-      <img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
-      <img src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
-      <img src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
+    <!-- RIGHT 6 squares -->
+    <div class="preview-side right-side">
+      <img onclick="enlarge(this.src)" src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
+      <img onclick="enlarge(this.src)" src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
+      <img onclick="enlarge(this.src)" src="images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg">
+      <img onclick="enlarge(this.src)" src="images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg">
+      <img onclick="enlarge(this.src)" src="images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg">
+      <img onclick="enlarge(this.src)" src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg">
     </div>
 
   </div>
 </div>
 
 
-<!-- POPUP GALLERY -->
+
+<!-- =============================
+     POPUP GALLERY
+     ============================= -->
 <div id="galleryModal" class="gallery-modal" onclick="closeOnOutside(event)">
   <div class="gallery-content" onclick="event.stopPropagation()">
     <span class="close-btn" onclick="closeGallery()">×</span>
@@ -265,14 +299,18 @@ header {
 </div>
 
 
-<!-- FULLSCREEN -->
+
+<!-- FULLSCREEN IMAGE VIEW -->
 <div id="largeView" onclick="closeLarge()">
   <span id="largeViewClose">×</span>
   <img id="largeViewImg">
 </div>
 
 
-<!-- MAIN CONTENT -->
+
+<!-- =============================
+     MAIN CONTENT
+     ============================= -->
 <div class="container-box">
 
 <div class="summary">Summary</div>
@@ -301,21 +339,26 @@ header {
 </div>
 
 
+
 <!-- JAVASCRIPT -->
 <script>
 function openGallery() {
   document.getElementById("galleryModal").style.display = "block";
 }
+
 function closeGallery() {
   document.getElementById("galleryModal").style.display = "none";
 }
-function closeOnOutside(e) {
+
+function closeOnOutside() {
   document.getElementById("galleryModal").style.display = "none";
 }
+
 function enlarge(src) {
   document.getElementById("largeViewImg").src = src;
   document.getElementById("largeView").style.display = "block";
 }
+
 function closeLarge() {
   document.getElementById("largeView").style.display = "none";
 }
