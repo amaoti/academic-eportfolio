@@ -8,6 +8,7 @@ permalink: /
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E-Portfolio Survey</title>
+
 <style>
 
 body {
@@ -42,10 +43,47 @@ header a:hover {
   color: #5ecbff;
 }
 
+/* FULL-WIDTH CAROUSEL (TOP) */
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll 24s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-item {
+  min-width: 48%;
+  flex-shrink: 0;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* Container */
 .container {
   max-width: 1150px;
-  margin: 80px auto;
+  margin: 0 auto 80px auto;
   padding: 50px;
   border-radius: 16px;
 
@@ -55,7 +93,7 @@ header a:hover {
   box-shadow: 0 0 40px rgba(0,0,0,0.45);
 }
 
-/* Summary Section */
+/* Summary */
 .summary {
   text-align: center;
   font-size: 18px;
@@ -72,7 +110,6 @@ header a:hover {
   gap: 30px 50px;
 }
 
-/* Cells */
 .cell {
   font-size: 17px;
   padding-bottom: 14px;
@@ -90,40 +127,6 @@ header a:hover {
   .grid {grid-template-columns: 1fr;}
 }
 
-/* Carousel */
-.carousel-title {
-  font-size: 20px;
-  margin-top: 60px;
-  margin-bottom: 18px;
-  color: #d9e1ee;
-  text-align: center;
-}
-
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 10px;
-  scroll-snap-type: x mandatory;
-}
-
-.carousel::-webkit-scrollbar {
-  height: 8px;
-}
-
-.carousel::-webkit-scrollbar-thumb {
-  background: #223040;
-  border-radius: 4px;
-}
-
-.carousel img {
-  height: 160px;
-  width: auto;
-  border-radius: 10px;
-  scroll-snap-align: start;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
 </style>
 </head>
 <body>
@@ -134,12 +137,32 @@ header a:hover {
 <a href="#">Contact</a>
 </header>
 
+<!-- CAROUSEL AT THE TOP UNDER NAV -->
+<div class="carousel-wrapper">
+  <div class="carousel-track">
+
+    <div class="carousel-item"><img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg"></div>
+    <div class="carousel-item"><img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg"></div>
+    <div class="carousel-item"><img src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg"></div>
+    <div class="carousel-item"><img src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg"></div>
+    <div class="carousel-item"><img src="images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg"></div>
+    <div class="carousel-item"><img src="images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg"></div>
+    <div class="carousel-item"><img src="images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg"></div>
+    <div class="carousel-item"><img src="images/3XLSWJSJQGCSFT3IYE5A5LRKLLVL7KMB.jpg"></div>
+    <div class="carousel-item"><img src="images/3Y5MOBAZXEZI3O3FUQDVPOWCN3AISRA5.jpg"></div>
+    <div class="carousel-item"><img src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg"></div>
+
+    <!-- Duplicate 2 for seamless loop -->
+    <div class="carousel-item"><img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg"></div>
+    <div class="carousel-item"><img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg"></div>
+
+  </div>
+</div>
+
 <div class="container">
 
 <div class="summary">
-  [Enter a brief explanation of your academic ePortfolio survey. Describe
-  what this page represents, the purpose of the survey responses, and the
-  types of work you'll be showcasing below.]
+[Summary]
 </div>
 
 <div class="grid">
@@ -171,21 +194,6 @@ header a:hover {
 <div class="cell">Mauris vitae ipsum ut lorem tempor commodo.</div>
 <div class="cell">Cras ultrices lectus nec magna ultrices, eu venenatis ipsum dictum.</div>
 
-</div>
-
-<div class="carousel-title">Project Preview Gallery</div>
-
-<div class="carousel">
-  <img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg" alt="">
-  <img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg" alt="">
-  <img src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg" alt="">
-  <img src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg" alt="">
-  <img src="images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg" alt="">
-  <img src="images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg" alt="">
-  <img src="images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg" alt="">
-  <img src="images/3XLSWJSJQGCSFT3IYE5A5LRKLLVL7KMB.jpg" alt="">
-  <img src="images/3Y5MOBAZXEZI3O3FUQDVPOWCN3AISRA5.jpg" alt="">
-  <img src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg" alt="">
 </div>
 
 </div>
