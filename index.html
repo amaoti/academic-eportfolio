@@ -13,11 +13,12 @@ permalink: /
 
 <style>
 
+/* body */
 body {
   margin: 0;
   padding: 0;
   font-family: "Inter", Arial, sans-serif;
-  background: #141a22;
+  background: #1d242d;
   color: #e6e8ec;
 }
 
@@ -40,13 +41,15 @@ header {
 }
 
 .nav-left a {
-  color: #a9b8c9;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .nav-left a:hover {
   color: #5ecbff;
+  text-shadow: 0 0 6px rgba(94,203,255,0.6);
 }
 
 .nav-right-title {
@@ -97,7 +100,7 @@ header {
   cursor: pointer;
 }
 
-/* popup gallery */
+/* gallery */
 .gallery-modal {
   display: none;
   position: fixed;
@@ -145,29 +148,33 @@ header {
   background: rgba(0,0,0,0.85);
   backdrop-filter: blur(6px);
   z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .largeView-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3%;
+  max-width: 92%;
+  max-height: 92%;
 }
 
-#largeView img {
-  max-width: 92%;
-  max-height: 80%;
+#largeViewImg {
+  max-width: 100%;
+  max-height: 75vh;
   border-radius: 12px;
 }
 
 #largeViewCaption {
-  margin-top: 22px;
+  margin-top: 18px;
   color: #ffffff;
   font-family: "Courier New", monospace;
-  font-size: 17px;
-  max-width: 80%;
-  line-height: 1.5;
+  font-size: 18px;
   text-align: center;
+  max-width: 85%;
+  line-height: 1.5;
 }
 
 #largeViewClose {
@@ -199,7 +206,7 @@ header {
   font-weight: 600;
 }
 
-/* two-column table */
+/* grid */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -244,12 +251,12 @@ header {
   <div class="preview-center">
 
     <div class="preview-side left-side">
-      <img onclick="enlarge(this.src)" src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
-      <img onclick="enlarge(this.src)" src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
-      <img onclick="enlarge(this.src)" src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
-      <img onclick="enlarge(this.src)" src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
-      <img onclick="enlarge(this.src)" src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
-      <img onclick="enlarge(this.src)" src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_1.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_2.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_3.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_4.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_5.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_6.jpg">
     </div>
 
     <button class="preview-button" onclick="openGallery()">
@@ -257,42 +264,44 @@ header {
     </button>
 
     <div class="preview-side right-side">
-      <img onclick="enlarge(this.src)" src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
-      <img onclick="enlarge(this.src)" src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
-      <img onclick="enlarge(this.src)" src="images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg">
-      <img onclick="enlarge(this.src)" src="images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg">
-      <img onclick="enlarge(this.src)" src="images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg">
-      <img onclick="enlarge(this.src)" src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_7.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_8.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_9.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_10.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_11.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_12.jpg">
     </div>
 
   </div>
 </div>
 
-<!-- gallery -->
+<!-- popup gallery -->
 <div id="galleryModal" class="gallery-modal" onclick="closeOnOutside(event)">
   <div class="gallery-content" onclick="event.stopPropagation()">
     <span class="close-btn" onclick="closeGallery()">×</span>
 
     <div class="gallery-grid">
-      <img onclick="enlarge(this.src)" src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
-      <img onclick="enlarge(this.src)" src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
-      <img onclick="enlarge(this.src)" src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
-      <img onclick="enlarge(this.src)" src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
-      <img onclick="enlarge(this.src)" src="images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg">
-      <img onclick="enlarge(this.src)" src="images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg">
-      <img onclick="enlarge(this.src)" src="images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg">
-      <img onclick="enlarge(this.src)" src="images/3XLSWJSJQGCSFT3IYE5A5LRKLLVL7KMB.jpg">
-      <img onclick="enlarge(this.src)" src="images/3Y5MOBAZXEZI3O3FUQDVPOWCN3AISRA5.jpg">
-      <img onclick="enlarge(this.src)" src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_1.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_2.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_3.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_4.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_5.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_6.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_7.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_8.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_9.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_10.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_11.jpg">
+      <img onclick="enlarge(this.src)" src="images/image_12.jpg">
     </div>
 
   </div>
 </div>
 
 <!-- fullscreen -->
-<div id="largeView" onclick="closeLarge()">
-  <span id="largeViewClose">×</span>
-  <div class="largeView-inner" onclick="event.stopPropagation()">
+<div id="largeView">
+  <span id="largeViewClose" onclick="closeLarge()">×</span>
+  <div class="largeView-inner">
     <img id="largeViewImg">
     <div id="largeViewCaption"></div>
   </div>
@@ -339,10 +348,12 @@ header {
 <!-- scripts -->
 <script>
 
+/* open gallery */
 function openGallery() {
   document.getElementById("galleryModal").style.display = "block";
 }
 
+/* close gallery */
 function closeGallery() {
   document.getElementById("galleryModal").style.display = "none";
 }
@@ -353,24 +364,35 @@ function closeOnOutside() {
 
 /* captions */
 const captions = {
-  "images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg": "This assignment was completed in Class X and explores Topic X.",
-  "images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg": "This assignment was completed in Class Y and examines Concept Y.",
-  "images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg": "This project was done in Course Z and focuses on Research Area Z.",
-  "images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg": "This assignment was completed in Course A and describes Topic A.",
-  "images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg": "This project was completed in Course B and showcases Skill B.",
-  "images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg": "This work was created in Class C and highlights Topic C.",
-  "images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg": "This assignment was done in Class D and relates to Area D.",
-  "images/3XLSWJSJQGCSFT3IYE5A5LRKLLVL7KMB.jpg": "This project was produced in Class E and explores Theme E.",
-  "images/3Y5MOBAZXEZI3O3FUQDVPOWCN3AISRA5.jpg": "This work was completed in Class F and focuses on Topic F.",
-  "images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg": "This assignment was created in Class G and analyzes Concept G."
+  "images/image_1.jpg": "This assignment was completed in Class X and explores Topic X.",
+  "images/image_2.jpg": "This assignment was completed in Class Y and examines Concept Y.",
+  "images/image_3.jpg": "This project was done in Course Z and focuses on Research Area Z.",
+  "images/image_4.jpg": "This assignment was completed in Course A and describes Topic A.",
+  "images/image_5.jpg": "This work was done in Course X2 and illustrates Topic A2.",
+  "images/image_6.jpg": "This project was completed in Course Y2 and explores Topic B.",
+  "images/image_7.jpg": "This assignment comes from Class Z2 and focuses on Concept C.",
+  "images/image_8.jpg": "This work comes from Class A3 and highlights Skill D.",
+  "images/image_9.jpg": "This project was completed in Course B2 and shows applied work.",
+  "images/image_10.jpg": "This assignment relates to Class C2 and examines a key theme.",
+  "images/image_11.jpg": "This project was built in Course D2 and explores a research idea.",
+  "images/image_12.jpg": "This assignment comes from Class E and explains Concept F."
 };
 
+/* fullscreen image */
 function enlarge(src) {
   document.getElementById("largeViewImg").src = src;
   document.getElementById("largeViewCaption").textContent = captions[src] || "";
-  document.getElementById("largeView").style.display = "block";
+  document.getElementById("largeView").style.display = "flex";
 }
 
+/* click outside image closes view */
+document.getElementById("largeView").addEventListener("click", function(e) {
+  if (e.target.id === "largeView") {
+    closeLarge();
+  }
+});
+
+/* close view */
 function closeLarge() {
   document.getElementById("largeView").style.display = "none";
 }
