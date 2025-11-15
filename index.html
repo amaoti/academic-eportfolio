@@ -9,13 +9,64 @@ permalink: /
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E-Portfolio Survey</title>
 <style>
-body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8;}
-header {background: #111; color: #fff; padding: 15px 20px; display: flex; gap: 20px; font-size: 16px;}
-header a {color: #fff; text-decoration: none;}
-.container {max-width: 1100px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 6px;}
-.grid {display: grid; grid-template-columns: 1fr 1fr; row-gap: 25px; column-gap: 40px;}
-.cell {font-size: 18px; padding-bottom: 10px; border-bottom: 1px solid #ddd;}
-@media(max-width: 700px){.grid{grid-template-columns:1fr;}}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #0c0f14;
+  color: #e5e5e5;
+}
+
+header {
+  background: #0f141b;
+  padding: 16px 30px;
+  display: flex;
+  gap: 32px;
+  font-size: 15px;
+  border-bottom: 1px solid #1b222d;
+}
+
+header a {
+  color: #a7b4c6;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+header a:hover {
+  color: #4db8ff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 60px auto;
+  background: #11161e;
+  padding: 45px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  border: 1px solid #1c2430;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 50px;
+}
+
+.cell {
+  font-size: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #242e3d;
+  transition: 0.2s;
+}
+
+.cell:hover {
+  border-color: #4db8ff;
+  color: #4db8ff;
+}
+
+@media(max-width: 800px) {
+  .grid {grid-template-columns: 1fr;}
+}
 </style>
 </head>
 <body>
@@ -29,8 +80,6 @@ header a {color: #fff; text-decoration: none;}
 
 <div class="container">
 <div class="grid">
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
 
 <div class="cell">[Enter Text Here]</div>
 <div class="cell">[Enter Text Here]</div>
@@ -58,6 +107,10 @@ header a {color: #fff; text-decoration: none;}
 
 <div class="cell">[Enter Text Here]</div>
 <div class="cell">[Enter Text Here]</div>
+
+<div class="cell">[Enter Text Here]</div>
+<div class="cell">[Enter Text Here]</div>
+
 </div>
 </div>
 
