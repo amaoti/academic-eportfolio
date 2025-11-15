@@ -142,13 +142,13 @@ header {
 
 /* fullscreen */
 #largeView {
-  display: none;
+  display: none; /* FIXED */
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
   backdrop-filter: blur(6px);
   z-index: 3000;
-  display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -380,8 +380,12 @@ const captions = {
 
 /* fullscreen image */
 function enlarge(src) {
+
+  // Normalize source to match caption keys
+  const rel = src.substring(src.indexOf("images/"));
+
   document.getElementById("largeViewImg").src = src;
-  document.getElementById("largeViewCaption").textContent = captions[src] || "";
+  document.getElementById("largeViewCaption").textContent = captions[rel] || "";
   document.getElementById("largeView").style.display = "flex";
 }
 
