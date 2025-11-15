@@ -1,53 +1,62 @@
-<!-- PREVIEW SECTION (left-aligned, fixed placement, stable layout) -->
-<div class="preview-section">
+---
+permalink: /
+---
 
-  <div class="preview-header">
-    <button class="preview-button" onclick="openGallery()">
-      View Some of Amaobi's Sample Work
-    </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic ePortfolio</title>
 
-    <div class="preview-collage">
-      <img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
-      <img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
-      <img src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
-      <img src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
-    </div>
-  </div>
-
-</div>
-
-
-<!-- POPUP GALLERY -->
-<div id="galleryModal" class="gallery-modal" onclick="closeOnOutside(event)">
-  <div class="gallery-content" onclick="event.stopPropagation()">
-
-    <span class="close-btn" onclick="closeGallery()">×</span>
-
-    <div class="gallery-grid">
-      <img onclick="enlarge(this.src)" src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
-      <img onclick="enlarge(this.src)" src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
-      <img onclick="enlarge(this.src)" src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
-      <img onclick="enlarge(this.src)" src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
-      <img onclick="enlarge(this.src)" src="images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg">
-      <img onclick="enlarge(this.src)" src="images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg">
-      <img onclick="enlarge(this.src)" src="images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg">
-      <img onclick="enlarge(this.src)" src="images/3XLSWJSJQGCSFT3IYE5A5LRKLLVL7KMB.jpg">
-      <img onclick="enlarge(this.src)" src="images/3Y5MOBAZXEZI3O3FUQDVPOWCN3AISRA5.jpg">
-      <img onclick="enlarge(this.src)" src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg">
-    </div>
-
-  </div>
-</div>
-
-
-<!-- FULLSCREEN IMAGE -->
-<div id="largeView" onclick="closeLarge()">
-  <span id="largeViewClose">×</span>
-  <img id="largeViewImg">
-</div>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #141a22;
+  color: #e6e8ec;
+}
+
+/* NAVBAR */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(20,26,34,0.95);
+  backdrop-filter: blur(10px);
+  padding: 16px 40px;
+  border-bottom: 1px solid #222b35;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-left a {
+  color: #a9b8c9;
+  text-decoration: none;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.nav-left a:hover {
+  color: #5ecbff;
+}
+
+.nav-center {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
 
 /* PREVIEW SECTION – STABLE BLOCK ABOVE TABLE */
 .preview-section {
@@ -63,7 +72,6 @@
   gap: 25px;
 }
 
-/* NEW BUTTON TEXT */
 .preview-button {
   padding: 12px 26px;
   background: #cc0033;
@@ -75,7 +83,6 @@
   white-space: nowrap;
 }
 
-/* COLLAGE NEXT TO BUTTON (left aligned) */
 .preview-collage {
   display: grid;
   grid-template-columns: repeat(2, 95px);
@@ -89,7 +96,6 @@
   object-fit: cover;
   border-radius: 6px;
 }
-
 
 /* POPUP GALLERY */
 .gallery-modal {
@@ -131,7 +137,6 @@
   cursor: pointer;
 }
 
-
 /* FULLSCREEN IMAGE */
 #largeView {
   display: none;
@@ -159,31 +164,164 @@
   cursor: pointer;
 }
 
+/* MAIN CONTENT */
+.container-box {
+  max-width: 1100px;
+  margin: 40px auto 80px auto;
+  padding: 50px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.summary {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 50px;
+  color: white;
+  font-weight: 600;
+}
+
+/* SURVEY GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 50px;
+}
+
+.cell {
+  font-size: 17px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(94,203,255,0.25);
+}
+
+.cell:hover {
+  border-color: #5ecbff;
+  color: #5ecbff;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
+</head>
 
 
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="nav-left">
+    <a href="https://amaoti.github.io/portfolio">Portfolio</a>
+    <a href="https://linkedin.com/in/amaobiotiji">LinkedIn</a>
+  </div>
+  <div class="nav-center">Academic ePortfolio</div>
+</header>
+
+
+<!-- PREVIEW SECTION -->
+<div class="preview-section">
+  <div class="preview-header">
+
+    <button class="preview-button" onclick="openGallery()">
+      View Some of Amaobi's Sample Work
+    </button>
+
+    <div class="preview-collage">
+      <img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
+      <img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
+      <img src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
+      <img src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- POPUP GALLERY -->
+<div id="galleryModal" class="gallery-modal" onclick="closeOnOutside(event)">
+  <div class="gallery-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeGallery()">×</span>
+
+    <div class="gallery-grid">
+      <img onclick="enlarge(this.src)" src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg">
+      <img onclick="enlarge(this.src)" src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg">
+      <img onclick="enlarge(this.src)" src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg">
+      <img onclick="enlarge(this.src)" src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg">
+      <img onclick="enlarge(this.src)" src="images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg">
+      <img onclick="enlarge(this.src)" src="images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg">
+      <img onclick="enlarge(this.src)" src="images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg">
+      <img onclick="enlarge(this.src)" src="images/3XLSWJSJQGCSFT3IYE5A5LRKLLVL7KMB.jpg">
+      <img onclick="enlarge(this.src)" src="images/3Y5MOBAZXEZI3O3FUQDVPOWCN3AISRA5.jpg">
+      <img onclick="enlarge(this.src)" src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FULLSCREEN -->
+<div id="largeView" onclick="closeLarge()">
+  <span id="largeViewClose">×</span>
+  <img id="largeViewImg">
+</div>
+
+
+<!-- MAIN CONTENT -->
+<div class="container-box">
+
+<div class="summary">Summary</div>
+
+<div class="grid">
+  <div class="cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+  <div class="cell">Aenean sed urna sit amet mauris convallis fermentum.</div>
+  <div class="cell">Suspendisse commodo orci nec lorem bibendum dictum.</div>
+  <div class="cell">Curabitur cursus risus id nulla dictum, ac facilisis elit tempor.</div>
+  <div class="cell">Donec pretium enim quis arcu tincidunt, eget maximus purus egestas.</div>
+  <div class="cell">Mauris blandit felis eget diam finibus, nec pellentesque dolor luctus.</div>
+  <div class="cell">Proin dignissim est vitae arcu lobortis, ac hendrerit risus mattis.</div>
+  <div class="cell">Integer vitae magna pretium, sollicitudin dolor eget, lacinia est.</div>
+  <div class="cell">Vestibulum finibus sapien eget interdum mattis.</div>
+  <div class="cell">Phasellus luctus velit in tellus aliquet, et tempus lorem convallis.</div>
+  <div class="cell">Sed viverra nisl at consectetur vestibulum.</div>
+  <div class="cell">Morbi dictum nibh quis arcu congue, non facilisis mauris feugiat.</div>
+  <div class="cell">Nam bibendum erat a dapibus pretium.</div>
+  <div class="cell">Aliquam varius dolor id felis dictum scelerisque.</div>
+  <div class="cell">Praesent vulputate nibh rutrum, faucibus libero non, laoreet ex.</div>
+  <div class="cell">Curabitur sagittis ante non justo tincidunt hendrerit.</div>
+  <div class="cell">Mauris vitae ipsum ut lorem tempor commodo.</div>
+  <div class="cell">Cras ultrices lectus nec magna ultrices, eu venenatis ipsum dictum.</div>
+</div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
 <script>
 function openGallery() {
   document.getElementById("galleryModal").style.display = "block";
 }
-
 function closeGallery() {
   document.getElementById("galleryModal").style.display = "none";
 }
-
-/* CLICK OUTSIDE to close */
 function closeOnOutside(e) {
   document.getElementById("galleryModal").style.display = "none";
 }
-
-/* ENLARGE IMAGE */
 function enlarge(src) {
   document.getElementById("largeViewImg").src = src;
   document.getElementById("largeView").style.display = "block";
 }
-
-/* CLOSE FULLSCREEN */
 function closeLarge() {
   document.getElementById("largeView").style.display = "none";
 }
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
