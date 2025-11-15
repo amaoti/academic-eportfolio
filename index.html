@@ -7,109 +7,119 @@ permalink: /
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Otiji - Academic ePortfolio</title>
+<title>E-Portfolio Survey</title>
 <style>
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Inter", Arial, sans-serif;
-  background: #0c0f14;
-  color: #e5e5e5;
+  background: #0b0e14;
+  color: #d9e1ee;
 }
 
+/* Header */
 header {
-  background: #0f141b;
-  padding: 16px 30px;
+  background: #0e131a;
+  padding: 16px 40px;
   display: flex;
-  gap: 32px;
+  gap: 36px;
   font-size: 15px;
-  border-bottom: 1px solid #1b222d;
+  border-bottom: 1px solid #1b2431;
 }
 
 header a {
-  color: #a7b4c6;
+  color: #a9b8c9;
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.25s ease;
 }
 
 header a:hover {
-  color: #4db8ff;
+  color: #5ecbff;
+  text-shadow: 0 0 6px #5ecbff;
 }
 
+/* Glass Card */
 .container {
-  max-width: 1100px;
-  margin: 60px auto;
-  background: #11161e;
-  padding: 45px;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
-  border: 1px solid #1c2430;
+  max-width: 1150px;
+  margin: 70px auto;
+  padding: 50px;
+  border-radius: 16px;
+
+  background: rgba(17, 22, 30, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(94, 203, 255, 0.12);
+  box-shadow: 0 0 40px rgba(0,0,0,0.45), 
+              0 0 20px rgba(94,203,255,0.06) inset;
 }
 
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px 50px;
+  gap: 30px 50px;
 }
 
+/* Cells */
 .cell {
-  font-size: 18px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #242e3d;
-  transition: 0.2s;
+  font-size: 17px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(94,203,255,0.15);
+  transition: 0.25s ease;
 }
 
 .cell:hover {
-  border-color: #4db8ff;
-  color: #4db8ff;
+  border-color: #5ecbff;
+  color: #5ecbff;
+  text-shadow: 0 0 6px #5ecbff;
 }
 
 @media(max-width: 800px) {
   .grid {grid-template-columns: 1fr;}
 }
+
 </style>
 </head>
 <body>
 
 <header>
-<a href="[Enter Link]">Home</a>
-<a href="[Enter Link]">Portfolio</a>
-<a href="[Enter Link]">Resume</a>
-<a href="[Enter Link]">Contact</a>
+<a href="#">Home</a>
+<a href="#">Portfolio</a>
+<a href="#">Resume</a>
+<a href="#">Contact</a>
 </header>
 
 <div class="container">
 <div class="grid">
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+<div class="cell">Aenean sed urna sit amet mauris convallis fermentum.</div>
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Suspendisse commodo orci nec lorem bibendum dictum.</div>
+<div class="cell">Curabitur cursus risus id nulla dictum, ac facilisis elit tempor.</div>
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Donec pretium enim quis arcu tincidunt, eget maximus purus egestas.</div>
+<div class="cell">Mauris blandit felis eget diam finibus, nec pellentesque dolor luctus.</div>
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Proin dignissim est vitae arcu lobortis, ac hendrerit risus mattis.</div>
+<div class="cell">Integer vitae magna pretium, sollicitudin dolor eget, lacinia est.</div>
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Vestibulum finibus sapien eget interdum mattis.</div>
+<div class="cell">Phasellus luctus velit in tellus aliquet, et tempus lorem convallis.</div>
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Sed viverra nisl at consectetur vestibulum.</div>
+<div class="cell">Morbi dictum nibh quis arcu congue, non facilisis mauris feugiat.</div>
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Nam bibendum erat a dapibus pretium.</div>
+<div class="cell">Aliquam varius dolor id felis dictum scelerisque.</div>
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Praesent vulputate nibh rutrum, faucibus libero non, laoreet ex.</div>
+<div class="cell">Curabitur sagittis ante non justo tincidunt hendrerit.</div>
 
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
-
-<div class="cell">[Enter Text Here]</div>
-<div class="cell">[Enter Text Here]</div>
+<div class="cell">Mauris vitae ipsum ut lorem tempor commodo.</div>
+<div class="cell">Cras ultrices lectus nec magna ultrices, eu venenatis ipsum dictum.</div>
 
 </div>
 </div>
