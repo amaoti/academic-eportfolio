@@ -9,101 +9,69 @@ permalink: /
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E-Portfolio Survey</title>
 
-<style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<style>
 body {
   margin: 0;
   padding: 0;
   font-family: "Inter", Arial, sans-serif;
-  background: #0b0e14;
+  background: #11161d;
   color: #d9e1ee;
 }
 
-/* Header */
 header {
   position: sticky;
   top: 0;
-  z-index: 20;
-  background: rgba(14,19,26,0.92);
-  padding: 16px 40px;
-  display: flex;
-  gap: 36px;
-  font-size: 15px;
-  border-bottom: 1px solid #1b2431;
+  z-index: 50;
+  background: rgba(18,24,32,0.95);
   backdrop-filter: blur(10px);
+  padding: 14px 40px;
+  border-bottom: 1px solid #1f2a36;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
 }
 
 header a {
   color: #a9b8c9;
   text-decoration: none;
-  transition: 0.25s ease;
+  font-size: 15px;
+  transition: .2s;
 }
 
 header a:hover {
   color: #5ecbff;
 }
 
-/* FULL-WIDTH CAROUSEL (TOP) */
-.carousel-wrapper {
-  width: 100%;
-  overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 60px;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 30px;
-  width: max-content;
-  animation: scroll 24s linear infinite;
-}
-
-.carousel-track:hover {
-  animation-play-state: paused;
-}
-
-.carousel-item {
-  min-width: 48%;
-  flex-shrink: 0;
-}
-
 .carousel-item img {
   width: 100%;
-  height: 340px;
+  height: 330px;
   object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.08);
 }
 
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+.carousel-indicators [data-bs-target] {
+  background-color: #5ecbff;
 }
 
-/* Container */
-.container {
-  max-width: 1150px;
-  margin: 0 auto 80px auto;
+.container-box {
+  max-width: 1100px;
+  margin: 50px auto 80px auto;
   padding: 50px;
   border-radius: 16px;
-
-  background: rgba(17, 22, 30, 0.65);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(94, 203, 255, 0.12);
-  box-shadow: 0 0 40px rgba(0,0,0,0.45);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
-/* Summary */
 .summary {
   text-align: center;
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto 50px auto;
-  line-height: 1.6;
-  color: #c7d0dd;
+  font-size: 26px;
+  margin-bottom: 50px;
+  color: #ffffff;
+  font-weight: 600;
 }
 
-/* Grid */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -112,36 +80,47 @@ header a:hover {
 
 .cell {
   font-size: 17px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(94,203,255,0.15);
-  transition: 0.2s ease;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(94,203,255,0.25);
+  transition: .2s;
 }
 
 .cell:hover {
   border-color: #5ecbff;
   color: #5ecbff;
-  transform: scale(1.015);
 }
 
-@media(max-width: 800px) {
-  .grid {grid-template-columns: 1fr;}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
-
 </style>
 </head>
+
 <body>
 
 <header>
-<a href="#">Portfolio</a>
-<a href="#">Resume</a>
-<a href="#">Contact</a>
+  <a href="#">Portfolio</a>
+  <a href="#">LinkedIn</a>
 </header>
 
-<!-- CAROUSEL AT THE TOP UNDER NAV -->
-<div class="carousel-wrapper">
-  <div class="carousel-track">
+<div id="topCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="5"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="6"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="7"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="8"></button>
+    <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="9"></button>
+  </div>
 
-    <div class="carousel-item"><img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg"></div>
+  <div class="carousel-inner">
+    <div class="carousel-item active"><img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg"></div>
     <div class="carousel-item"><img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg"></div>
     <div class="carousel-item"><img src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg"></div>
     <div class="carousel-item"><img src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg"></div>
@@ -151,52 +130,44 @@ header a:hover {
     <div class="carousel-item"><img src="images/3XLSWJSJQGCSFT3IYE5A5LRKLLVL7KMB.jpg"></div>
     <div class="carousel-item"><img src="images/3Y5MOBAZXEZI3O3FUQDVPOWCN3AISRA5.jpg"></div>
     <div class="carousel-item"><img src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg"></div>
-
-    <!-- Duplicate 2 for seamless loop -->
-    <div class="carousel-item"><img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg"></div>
-    <div class="carousel-item"><img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg"></div>
-
   </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#topCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#topCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
 </div>
 
-<div class="container">
+<div class="container-box">
 
-<div class="summary">
-[Summary]
-</div>
+<div class="summary">Summary</div>
 
 <div class="grid">
-
 <div class="cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
 <div class="cell">Aenean sed urna sit amet mauris convallis fermentum.</div>
-
 <div class="cell">Suspendisse commodo orci nec lorem bibendum dictum.</div>
 <div class="cell">Curabitur cursus risus id nulla dictum, ac facilisis elit tempor.</div>
-
 <div class="cell">Donec pretium enim quis arcu tincidunt, eget maximus purus egestas.</div>
 <div class="cell">Mauris blandit felis eget diam finibus, nec pellentesque dolor luctus.</div>
-
 <div class="cell">Proin dignissim est vitae arcu lobortis, ac hendrerit risus mattis.</div>
 <div class="cell">Integer vitae magna pretium, sollicitudin dolor eget, lacinia est.</div>
-
 <div class="cell">Vestibulum finibus sapien eget interdum mattis.</div>
 <div class="cell">Phasellus luctus velit in tellus aliquet, et tempus lorem convallis.</div>
-
 <div class="cell">Sed viverra nisl at consectetur vestibulum.</div>
 <div class="cell">Morbi dictum nibh quis arcu congue, non facilisis mauris feugiat.</div>
-
 <div class="cell">Nam bibendum erat a dapibus pretium.</div>
 <div class="cell">Aliquam varius dolor id felis dictum scelerisque.</div>
-
 <div class="cell">Praesent vulputate nibh rutrum, faucibus libero non, laoreet ex.</div>
 <div class="cell">Curabitur sagittis ante non justo tincidunt hendrerit.</div>
-
 <div class="cell">Mauris vitae ipsum ut lorem tempor commodo.</div>
 <div class="cell">Cras ultrices lectus nec magna ultrices, eu venenatis ipsum dictum.</div>
-
 </div>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
