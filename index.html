@@ -20,12 +20,16 @@ body {
 
 /* Header */
 header {
-  background: #0e131a;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(14,19,26,0.92);
   padding: 16px 40px;
   display: flex;
   gap: 36px;
   font-size: 15px;
   border-bottom: 1px solid #1b2431;
+  backdrop-filter: blur(10px);
 }
 
 header a {
@@ -36,23 +40,29 @@ header a {
 
 header a:hover {
   color: #5ecbff;
-  text-shadow: 0 0 6px #5ecbff;
 }
 
-/* Glass Card */
+/* Container */
 .container {
   max-width: 1150px;
-  margin: 70px auto;
+  margin: 80px auto;
   padding: 50px;
   border-radius: 16px;
 
   background: rgba(17, 22, 30, 0.65);
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
   border: 1px solid rgba(94, 203, 255, 0.12);
-  box-shadow: 0 0 40px rgba(0,0,0,0.45), 
-              0 0 20px rgba(94,203,255,0.06) inset;
+  box-shadow: 0 0 40px rgba(0,0,0,0.45);
+}
+
+/* Summary Section */
+.summary {
+  text-align: center;
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+  color: #c7d0dd;
 }
 
 /* Grid */
@@ -67,17 +77,51 @@ header a:hover {
   font-size: 17px;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(94,203,255,0.15);
-  transition: 0.25s ease;
+  transition: 0.2s ease;
 }
 
 .cell:hover {
   border-color: #5ecbff;
   color: #5ecbff;
-  text-shadow: 0 0 6px #5ecbff;
+  transform: scale(1.015);
 }
 
 @media(max-width: 800px) {
   .grid {grid-template-columns: 1fr;}
+}
+
+/* Carousel */
+.carousel-title {
+  font-size: 20px;
+  margin-top: 60px;
+  margin-bottom: 18px;
+  color: #d9e1ee;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #223040;
+  border-radius: 4px;
+}
+
+.carousel img {
+  height: 160px;
+  width: auto;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 </style>
@@ -85,13 +129,19 @@ header a:hover {
 <body>
 
 <header>
-<a href="#">Home</a>
 <a href="#">Portfolio</a>
 <a href="#">Resume</a>
 <a href="#">Contact</a>
 </header>
 
 <div class="container">
+
+<div class="summary">
+  [Enter a brief explanation of your academic ePortfolio survey. Describe
+  what this page represents, the purpose of the survey responses, and the
+  types of work you'll be showcasing below.]
+</div>
+
 <div class="grid">
 
 <div class="cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
@@ -122,6 +172,22 @@ header a:hover {
 <div class="cell">Cras ultrices lectus nec magna ultrices, eu venenatis ipsum dictum.</div>
 
 </div>
+
+<div class="carousel-title">Project Preview Gallery</div>
+
+<div class="carousel">
+  <img src="images/4BGDKHZIGWRPGEA24YPKTHY7LO6KDTWJ.jpg" alt="">
+  <img src="images/4DLEKHOXDYPJ5BDUUIAFYTJFZTZWVIO2.jpg" alt="">
+  <img src="images/4GWQK5UHREVHCKHUVQKFQWVLD32SQMMH.jpg" alt="">
+  <img src="images/4KBYEFYALILBEPMPAA6BQSZ6B3PRXGNX.jpg" alt="">
+  <img src="images/4KFFEPA37DTS6RFP5KAZP2JGJF6MBJJR.jpg" alt="">
+  <img src="images/4L7QISUWEQFKT2WCG6VPHWYFFABIAM64.jpg" alt="">
+  <img src="images/4MNHZSA7HLSALRUPOS2FL574FUMUOW2V.jpg" alt="">
+  <img src="images/3XLSWJSJQGCSFT3IYE5A5LRKLLVL7KMB.jpg" alt="">
+  <img src="images/3Y5MOBAZXEZI3O3FUQDVPOWCN3AISRA5.jpg" alt="">
+  <img src="images/4AJ7JIWTPDCKBOF7N35EE3QIPYNPH35W.jpg" alt="">
+</div>
+
 </div>
 
 </body>
