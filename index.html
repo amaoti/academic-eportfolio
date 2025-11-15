@@ -126,17 +126,30 @@ header {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
   width: 100%;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 150px;
+  height: 230px;
   object-fit: cover;
-  cursor: pointer;
   border-radius: 8px;
+}
+
+/* laptops/tablets */
+@media (max-width: 1300px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* fullscreen */
