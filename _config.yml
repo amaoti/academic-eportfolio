@@ -1,21 +1,21 @@
 # Site
-repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
-# favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
+repository: "Git repository where your resume will be hosted"
+favicon: ""
 
 # Content configuration version
 version: 2
 
 # Personal info
-name: Amaobi Otiji
-title: Academic Portfolio
+name: "Amaobi Otiji"
+title: "Academic Portfolio"
 
 # Dark Mode (true/false/never)
 darkmode: false
 
 # Social links
-linkedin_username: amaobiotiji
-github_username: amaoti
-academic_portfolio_url: https://amaoti.github.io/academic-eportfolio/
+linkedin_username: "amaobiotiji"
+github_username: "amaoti"
+academic_portfolio_url: "https://amaoti.github.io/academic-eportfolio/"
 
 # Google Analytics and Tag Manager
 gtm: "GTM-0000000"
@@ -23,20 +23,20 @@ gtag: "UA-00000000-0"
 google_analytics: "UA-00000000-0"
 
 # About Section
-about_profile_image: images/otiji_headshot.jpg
+about_profile_image: "images/otiji_headshot.jpg"
 about_content: |
   I’m completing my Master of Information at Rutgers with a concentration in Technology, Information and Management. My academic work centers on digital curation, preservation strategy, metadata, and the systems that support long-term access to cultural heritage materials.
 
 content:
-  - title: Master of Information Coursework
+  - title: "Master of Information Coursework"
     layout: list
     content:
       - layout: top-right
-        title: Rutgers University – New Brunswick
-        sub_title: Master of Information
-        caption: GPA 4.0 | ALA Accredited | Technology, Information and Management
+        title: "Rutgers University – New Brunswick"
+        sub_title: "Master of Information"
+        caption: "GPA 4.0 | ALA Accredited | Technology, Information and Management"
         description: |
-          This program brought together digital preservation, metadata standards, database design, records management, government information, knowledge organization, competitive intelligence, and the social and ethical frameworks that shape information work. These courses form the core of my academic training.
+          This program brought together digital preservation, metadata standards, database design, records management, government information, knowledge organization, competitive intelligence, and the social and ethical frameworks that shape information work.
 
           Completed Courses:
           - MI570 Management Principles in Information Organizations
@@ -55,35 +55,35 @@ content:
           - MI541 Government Information Resources
           - MI503 ePortfolio Capstone
 
-  - title: Projects
+  - title: "Projects"
     layout: list
     content:
       - layout: left
         border: weak
-        title: Unforgotten: Mount Zion and Female Union Band Society Cemeteries
-        link: https://www.unforgotten-mtzfubs.com/
-        link_text: Visit Project
+        title: "Unforgotten: Mount Zion and Female Union Band Society Cemeteries"
+        link: "https://www.unforgotten-mtzfubs.com/"
+        link_text: "Visit Project"
         additional_links:
-          - title: GitHub Repository
-            icon: fab fa-github
-            url: https://github.com/amaoti/black-legacy-lam
+          - title: "GitHub Repository"
+            icon: "fab fa-github"
+            url: "https://github.com/amaoti/black-legacy-lam"
         quote: >
           A digital exhibit and curated web archive exploring the history, preservation, and community significance of the Mount Zion and Female Union Band Society Cemeteries.
         description: |
           [Enter Text Here]
 
-  - title: Media & Outreach
+  - title: "Media & Outreach"
     layout: list
     content:
       - layout: left
         border: weak
-        title: [Enter Title]
-        link: [Enter Link]
-        link_text: View
+        title: "[Enter Title]"
+        link: "[Enter Link]"
+        link_text: "View"
         additional_links:
-          - title: GitHub
-            icon: fab fa-github
-            url: [Enter Link]
+          - title: "GitHub"
+            icon: "fab fa-github"
+            url: "[Enter Link]"
         quote: >
           [Enter Summary]
         description: |
@@ -91,28 +91,25 @@ content:
 
 # Footer
 footer_show_references: true
-# references_title: Full CV available upon request
 
 # Build settings
-# theme: modern-resume-theme (Use this is you are hosting your resume yourself)
-# remote_theme: sproogen/modern-resume-theme (Use this if you are hosting your resume on GitHub)
+remote_theme: "sproogen/modern-resume-theme"
 
 sass:
-  sass_dir: _sass
-  style: compressed
+  sass_dir: "_sass"
+  style: "compressed"
 
 plugins:
-  - jekyll-seo-tag
+  - "jekyll-seo-tag"
 
-exclude: [
-  "Gemfile",
-  "Gemfile.lock",
-  "node_modules",
-  "vendor/bundle/",
-  "vendor/cache/",
-  "vendor/gems/",
-  "vendor/ruby/",
-  "lib/",
-  "scripts/",
-  "docker-compose.yml",
-]
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
+  - "lib/"
+  - "scripts/"
+  - "docker-compose.yml"
