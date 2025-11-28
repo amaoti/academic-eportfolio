@@ -6,8 +6,8 @@ repository: Git repository where your resume will be hosted, only required if yo
 version: 2
 
 # Personal info
-name: Testing Name
-title: Digital Archivist & Librarian
+name: Amaobi Otiji
+title: Academic Portfolio
 
 # Dark Mode (true/false/never)
 darkmode: false
@@ -17,154 +17,78 @@ linkedin_username: amaobiotiji
 github_username: amaoti
 academic_portfolio_url: https://amaoti.github.io/academic-eportfolio/
 
-
 # Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
+gtm: "GTM-0000000"
+gtag: "UA-00000000-0"
+google_analytics: "UA-00000000-0"
 
 # About Section
-# about_title: About Me (Use this to override about section title)
 about_profile_image: images/otiji_headshot.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Experienced in digital stewardship of cultural heritage collections, with a focus on scalable workflows and equitable access. Skilled in executing large-scale digital projects within complex information architectures that connect people and collections.
-
-  [links](http://foobar.com) and highlight things <mark>like this</mark>.
-
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
+about_content: |
+  I’m completing my Master of Information at Rutgers with a concentration in Technology, Information and Management. My academic work centers on digital curation, preservation strategy, metadata, and the systems that support long-term access to cultural heritage materials.
 
 content:
-  - title: Experience
-    layout: list
-    content:
-      - layout: right
-        title: "Library of Congress"
-        sub_title: "<i>Digital Collections Specialist</i>"
-        caption: January 2024 - Present
-        description: | # this will include new lines to allow paragraphs
-          Description of role
-      - layout: right
-        sub_title: "<i>Digital Collections Technician</i>"
-        caption: November 2022 - January 2024
-        description: | # this will include new lines to allow paragraphs
-          Description of role
-      - layout: right
-        sub_title: "<i>Digital Conversion Technician</i>"
-        caption: May 2022 - November 2022
-        description: | # this will include new lines to allow paragraphs
-          Description of role
-      - layout: right
-        title: "National Museum of American History"
-        sub_title: "<i>Digital Assets Contractor</i>"
-        caption: April 2020 - April 2022
-        description: | # this will include new lines to allow paragraphs
-          Description of role
-      - layout: right
-        title: "Creekside Digital"
-        sub_title: "<i>Digital Technician Supervisor</i>"
-        caption: May 2018 - April 2020
-        description: | # this will include new lines to allow paragraphs
-          Description of role
-      - layout: right
-        title: "National Museum of American History"
-        sub_title: "<i>Collections Intern</i>"
-        caption: January 2018 - May 2018
-        description: | # this will include new lines to allow paragraphs
-          Description of role
-
-  - title: Education
+  - title: Master of Information Coursework
     layout: list
     content:
       - layout: top-right
-        title: Rutgers University - New Brunswick
+        title: Rutgers University – New Brunswick
         sub_title: Master of Information
-        caption: 2023 - 2025
-        description: | # this will include new lines to allow paragraphs
-          <b>Concentration:</b> Technology, Information, and Management <a href="https://comminfo.rutgers.edu/graduate-programs/master-information/concentrations/technology-information-and-management">↗️</a>
-          <br>
-          Accredited by the American Library Association (ALA)
-          <br>
-          <b>Concentration Courses:</b>
-          - Competitive Intelligence
-          - Database Design and Management
-          - Digital Curation
-          - Digital Preservation
-          - Government Information Resources
-          - Knowledge Management in Organizations
-          - Management Principles in Information Organizations
-          - Metadata for Information Professionals
-          - Records Management
-      - layout: top-right
-        title: Howard University
-        sub_title: Bachelor of Arts, History
-        caption: 2014 - 2018
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Areas of Concentration: United States History; African History
+        caption: GPA 4.0 | ALA Accredited | Technology, Information and Management
+        description: |
+          This program brought together digital preservation, metadata standards, database design, records management, government information, knowledge organization, competitive intelligence, and the social and ethical frameworks that shape information work. These courses form the core of my academic training.
 
-  - title: Awards & Honors
-    layout: list
-    content:
-      - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
+          Completed Courses:
+          - MI570 Management Principles in Information Organizations
+          - MI550 Introduction to Information Technologies
+          - MI501 Introduction to Library and Information Professions
+          - MI520 Organizing Information
+          - MI535 Competitive Intelligence
+          - MI599 Digital Preservation (Special Topic)
+          - MI574 Knowledge Management in Organizations
+          - MI580 Knowledge and Society
+          - MI557 Database Design and Management
+          - MI534 Records Management
+          - MI524 Metadata for the Information Professional
+          - MI502 Colloquium in Library and Information Sciences
+          - MI566 Digital Curation
+          - MI541 Government Information Resources
+          - MI503 ePortfolio Capstone
 
   - title: Projects
     layout: list
     content:
       - layout: left
         border: weak
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
+        title: Unforgotten: Mount Zion and Female Union Band Society Cemeteries
+        link: https://www.unforgotten-mtzfubs.com/
+        link_text: Visit Project
         additional_links:
-          - title: Github page for project (eg. sproogen/modern-resume-theme)
+          - title: GitHub Repository
             icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+            url: https://github.com/amaoti/black-legacy-lam
         quote: >
-          Short overview of the project (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
-
-
-
-  - title: "Professional Service <img src='images/banner.png' alt='Photo from National Book Festival 2024 showing By The People table and LOC staff talking to the public' />"
-    layout: list
-    content:
-      - layout: right
-        title: National Museum of American History
-        sub_title: Museum Ambassador
-        quote: Smithsonian Institution
-        caption: July 2023 - Present
-        description: | # this will include new lines to allow paragraphs
-          Description of role
+          A digital exhibit and curated web archive exploring the history, preservation, and community significance of the Mount Zion and Female Union Band Society Cemeteries.
+        description: |
+          [Enter Text Here]
 
   - title: Media & Outreach
     layout: list
     content:
       - layout: left
         border: weak
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
+        title: [Enter Title]
+        link: [Enter Link]
+        link_text: View
         additional_links:
-          - title: Github page for project (eg. sproogen/modern-resume-theme)
+          - title: GitHub
             icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+            url: [Enter Link]
         quote: >
-          Short overview of the project (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          [Enter Summary]
+        description: |
+          [Enter Text Here]
+
 # Footer
 footer_show_references: true
 # references_title: Full CV available upon request
