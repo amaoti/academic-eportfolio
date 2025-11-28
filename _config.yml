@@ -101,7 +101,7 @@ content:
             - [final]
 
 
-  - title: "Student Projects & Awards"
+  - title: "<mark><b>Student Projects & Awards</b></mark>"
     layout: list
     content:
       - layout: left
