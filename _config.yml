@@ -72,23 +72,6 @@ content:
         description: |
           [Enter Text Here]
 
-  - title: "Media & Outreach"
-    layout: list
-    content:
-      - layout: left
-        border: weak
-        title: "[Enter Title]"
-        link: "[Enter Link]"
-        link_text: "View"
-        additional_links:
-          - title: "GitHub"
-            icon: "fab fa-github"
-            url: "[Enter Link]"
-        quote: >
-          [Enter Summary]
-        description: |
-          [Enter Text Here]
-
 # Footer
 footer_show_references: true
 
