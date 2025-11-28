@@ -39,21 +39,67 @@ content:
           This program brought together digital preservation, metadata standards, database design, records management, government information, knowledge organization, competitive intelligence, and the social and ethical frameworks that shape information work.
 
           Completed Courses:
-          - MI570 Management Principles in Information Organizations
-          - MI550 Introduction to Information Technologies
-          - MI501 Introduction to Library and Information Professions
-          - MI520 Organizing Information
-          - MI535 Competitive Intelligence
-          - MI599 Digital Preservation (Special Topic)
-          - MI574 Knowledge Management in Organizations
-          - MI580 Knowledge and Society
-          - MI557 Database Design and Management
-          - MI534 Records Management
-          - MI524 Metadata for the Information Professional
-          - MI502 Colloquium in Library and Information Sciences
-          - MI566 Digital Curation
-          - MI541 Government Information Resources
-          - MI503 ePortfolio Capstone
+          - <mark>MI570 Management Principles in Information Organizations</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI550 Introduction to Information Technologies</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI501 Introduction to Library and Information Professions</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI520 Organizing Information</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI535 Competitive Intelligence</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI599 Digital Preservation (Special Topic)</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI574 Knowledge Management in Organizations</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI580 Knowledge and Society</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI557 Database Design and Management</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI534 Records Management</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI524 Metadata for the Information Professional</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI502 Colloquium in Library and Information Sciences</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI566 Digital Curation</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI541 Government Information Resources</mark>
+            - [course]
+            - [my work]
+            - [final]
+          - <mark>MI503 ePortfolio Capstone</mark>
+            - [course]
+            - [my work]
+            - [final]
+
 
   - title: "Student Projects & Awards"
     layout: list
