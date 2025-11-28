@@ -28,7 +28,7 @@ about_content: |
   I completed my Master of Information at Rutgers in December 2025. My concentration was <i>Technology, Information and Management</i>. My academic work centers on digital curation, preservation strategy, metadata, and the systems that support long-term access to cultural heritage materials.
 
 content:
-  - title: "<b>Master of Information Coursework</b>"
+  - title: "<mark>Master of Information Coursework</mark>"
     layout: list
     content:
       - layout: top-right
